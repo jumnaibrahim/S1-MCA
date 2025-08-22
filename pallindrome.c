@@ -17,5 +17,9 @@ int main()
     {
         printf("\nword isnt pallindrome");
     }
+<<<<<<< HEAD
 
 }
+=======
+}
+>>>>>>> 20d322d6c1954b40715e8817ed415d4f4991cbab
