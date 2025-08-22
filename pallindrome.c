@@ -17,18 +17,5 @@ int main()
     {
         printf("\nword isnt pallindrome");
     }
-    //comment
-     for(i=0;i<n-1;i++)
-    {
-        for(j=i+1;j<n;j++)
-        {
-            if(a[j]>a[i])
-            {
-                temp=a[i];
-                a[i]=a[j];
-                a[j]=temp;
-            }
-        }
-    }
-    printf("\nsorted array is \n");
+
 }
