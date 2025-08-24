@@ -4,7 +4,7 @@ struct node{
     int data;
     struct node* next;
 };
-struct node* head,*temp,*newnode;
+struct node* head,*temp,*temp1,*newnode;
 void create()
 {
    // head=0;
@@ -44,6 +44,60 @@ void insert_at_middle(int n)
     temp->next=newnode;
 
 }
+void delete_at_beginning()
+{
+    temp=head;
+    head=temp->next;
+    printf("\ndeleted element is %d",temp->data);
+}
+void delete_at_ending()
+{
+    temp=head;
+    while(temp->next->next!=0)
+    {
+        temp=temp->next;
+    }
+    printf("\ndeleted element is %d",temp->next->data);
+    temp->next=NULL;
+}
+void delete_at_middle()
+{
+    int pos,i;
+    temp=head;
+    printf("enter the position");
+    scanf("%d",&pos);
+    for(i=0;i<pos-1;i++)
+    {
+        temp=temp->next;
+    }
+    printf("\ndeleted element is %d",temp->next->data);
+    temp->next=temp->next->next;
+}
+void search()
+{
+    int a,flag=0,count=0;
+    temp=head;
+    printf("number you wanna search:");
+    scanf("%d",&a);
+    while(temp!=0)
+    {
+        if(a==temp->data)
+        {
+            flag=1;
+            break;
+        }
+        temp=temp->next;
+        count++;
+    }
+    if(flag==1)
+    {
+        printf("number is found at %dth position",count);
+    }
+    else
+    {
+        printf("number is not found");
+    }
+}
     void display()
     {
         temp=head;
@@ -52,14 +106,13 @@ void insert_at_middle(int n)
         {
             temp=temp->next;
             printf("%d\n",temp->data);
-
         }
     }
 
 int main()
 {
     int ch,n;
-    printf("\n1.beginning\n2.end\n3.middle\n4.display");
+    printf("\ninsert at \n1.beginning\n2.end\n3.middle\n4.display\ndelete at\n5.beginning\n6.end\n7.end");
     do
     {
         printf("\nenter the choice:");
@@ -78,12 +131,22 @@ int main()
             case 4:
             display();
             break;
+            case 5:
+            delete_at_beginning();
+            break;
+            case 6:
+            delete_at_ending();
+            break;
+            case 7:
+            delete_at_middle();
+            break;
+            case 8:
+            search();
+            break;
             default:
             printf("invalid");
             break;
-
-
-        }
-    }while(ch<5);
+         }
+    }while(ch<9);
     return 0;
 }
