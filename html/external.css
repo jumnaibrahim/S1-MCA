@@ -1,0 +1,50 @@
+h1{
+    color: rgb(8, 83, 110);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+  }
+  .container{
+    border: 1px;
+    padding: 5px;
+    background-image:url(picc.jpg);
+    border-radius: 10px;
+    width: 400px;
+    height:500px;
+    transition: transform 0.2s;
+
+    
+  }
+.container:hover{
+    transform: scale(1.04);
+
+}
+  .container1{
+    border: 1px;
+    padding: 5px;
+    background-image:url(picc.jpg);
+    width: 400px;
+    border-radius: 10px;
+     overflow-y: auto; 
+  height: 500px;
+    
+  }
+  .container1:hover{
+    transform: scale(1.04);
+
+}
+  .container2{
+    border: 1px;
+    padding: 5px;
+    background-image:url(picc.jpg);
+    width: 400px;
+    border-radius: 10px;
+    
+  }
+  .container2:hover{
+    transform: scale(1.04);
+
+}
+  .alldiv{
+    display: flex;
+    gap: 30px;
+    padding: 50px;
+  }

@@ -1,0 +1,162 @@
+<html>
+    <head>
+        <body>
+            <h2 style="text-decoration: underline;">Maths Functions</h2>
+            <input type="text" id="name" placeholder="enter the number: "><br><br>
+            <button onclick="round()">Round</button>
+            <button onclick="ceil()">Ceil</button>
+            <button onclick="floor()">Floor</button>
+            <button onclick="trunc()">Trunc</button>
+            <button onclick="sign()">Sign</button>
+            <button onclick="squareroot()">square root</button>
+            <button onclick="power()">power</button>
+            <button onclick="abs()">Abs</button>
+            <button onclick="sin()">Sin</button>
+            <button onclick="cos()">Cos</button>
+            <button onclick="random()">Random</button><br><br>
+            <input type="text" id="ans"><br><br>
+            <input type="text" id="minmax" placeholder="enter the values to find min and max"><br><br>
+            <button onclick="min()">min</button>
+            <button onclick="max()">max</button><br><br>
+            <input type="text" id="minimax"><br><br><br>
+            <h2 style="text-decoration: underline;">String Functions</h2>
+            <input type="text" id="efg" placeholder="enter the string"><br><br>
+            <button onclick="length()">length</button>
+            <button onclick="toUpper()">UpperCase</button>
+            <button onclick="toLower()">LowerrCase</button>
+            <button onclick="slice()">Slice</button>
+            <button onclick="index()">Index</button>
+            <button onclick="lastindex()">Last index</button>
+            <button onclick="search()">Search</button>
+            <button onclick="substring()">Substring</button>
+            <button onclick="substr()">Substr</button>
+            <button onclick="replace()">Replace</button>
+            <button onclick="concat()">Concat</button><br><br>
+            <input type="text" id="abc">
+        <script>
+            function round(){
+                let n=document.getElementById("name").value;
+                let res=Math.round(n);
+                document.getElementById("ans").value=res;
+            }
+            function ceil(){
+                let n=document.getElementById("name").value;
+                let res=Math.ceil(n);
+                document.getElementById("ans").value=res;
+            }
+            function floor(){
+                let n=document.getElementById("name").value;
+                let res=Math.floor(n);
+                document.getElementById("ans").value=res;
+            }
+            function trunc(){
+                let n=document.getElementById("name").value;
+                let res=Math.trunc(n);
+                document.getElementById("ans").value=res;
+            }
+            function sign(){
+                let n=document.getElementById("name").value;
+                let res=Math.sign(n);
+                document.getElementById("ans").value=res;
+            }
+            function squareroot(){
+                let n=document.getElementById("name").value;
+                let res=Math.sqrt(n);
+                document.getElementById("ans").value=res;
+            }
+            function power(){
+                let n=document.getElementById("name").value;
+                let res=Math.pow(n,3);
+                document.getElementById("ans").value=res;
+            }
+            function abs(){
+                let n=document.getElementById("name").value;
+                let res=Math.abs(n);
+                document.getElementById("ans").value=res;
+            }
+            function sin(){
+                let n=document.getElementById("name").value;
+                let res=Math.sin(n);
+                document.getElementById("ans").value=res;
+            }
+            function cos(){
+                let n=document.getElementById("name").value;
+                let res=Math.cos(n);
+                document.getElementById("ans").value=res;
+            }
+            function min(){
+                let values=document.getElementById("minmax").value.split(",").map(Number);
+                let res=Math.min(...values);
+                document.getElementById("minimax").value=res;
+            }
+            function max(){
+                let values=document.getElementById("minmax").value.split(",").map(Number);
+                let res=Math.max(...values);
+                document.getElementById("minimax").value=res;
+            }
+            function random(){
+                let n=document.getElementById("name").value;
+                let res=Math.random()*5;
+                document.getElementById("ans").value=res;
+            }
+            function length(){
+            let n=document.getElementById("efg").value;
+            let str=n.length;
+            document.getElementById("abc").value=str;
+            } 
+            function toUpper(){
+                let n=document.getElementById("efg").value;
+                let str=n.toUpperCase();
+                document.getElementById("abc").value=str;
+            }
+            function toLower(){
+                let n=document.getElementById("efg").value;
+                let str=n.toLowerCase();
+                document.getElementById("abc").value=str;
+            }
+            function slice(){
+                let n=document.getElementById("efg").value;
+                let str=n.slice(2,7);
+                document.getElementById("abc").value=str;
+            }
+            function index(){
+                let n=document.getElementById("efg").value;
+                //let m=document.getElementById("efg").value
+                let str=n.indexOf("mal");
+                document.getElementById("abc").value=str;
+            }
+            function lastindex(){
+                let n=document.getElementById("efg").value;
+                let str=n.lastIndexOf("na");
+                document.getElementById("abc").value=str;
+            }
+            function search(){
+                let n=document.getElementById("efg").value;
+                let str=n.search("mn");
+                document.getElementById("abc").value=str;
+            }
+            function substring(){
+                let n=document.getElementById("efg").value;
+                let str=n.substring(2,7);
+                document.getElementById("abc").value=str;
+            }
+            function substr(){
+                let n=document.getElementById("efg").value;
+                let str=n.substr(2,7);
+                document.getElementById("abc").value=str;
+            }
+            function replace(){
+                let n=document.getElementById("efg").value;
+                let str=n.substr(2,7);
+                document.getElementById("abc").value=str;
+            }
+            function concat(){
+                let n=document.getElementById("efg").value;
+                let str=n.substr(2,7);
+                document.getElementById("abc").value=str;
+            }
+            
+        </script>
+        </body>
+    </head>
+</html>
