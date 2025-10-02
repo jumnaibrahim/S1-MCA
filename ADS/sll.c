@@ -155,7 +155,7 @@ void search()
 int main()
 {
     int ch,n;
-    printf("\ninsert at \n1.beginning\n2.end\n3.middle\n4.display\ndelete at\n5.beginning\n6.end\n7.end");
+    printf("\ninsert at \n1.beginning\n2.end\n3.middle\n4.display\ndelete at\n5.beginning\n6.end\n7.postion\n8.search");
     do
     {
         printf("\nenter the choice:");

@@ -32,7 +32,7 @@ void insert()
         }
     }
     c:
-    if(n<max&&0<=pos<max)
+    if(n<max && pos<max && pos>=0)
     {
         a[pos]=val;
         n++;
@@ -43,12 +43,23 @@ void delete()
     int pos;
     printf("\nenter the position: ");
     scanf("%d",&pos);
-    printf("\ndeleted element is %d",a[pos]);
-    for(i=pos;i<n-1;i++)
+    if(pos<0||pos>=max)
     {
-        a[i]=a[i+1];
+        printf("\ninvalid index");
     }
-    n--;
+    else if(n<=0)
+    {
+        printf("\narray is empty");
+    }
+    else
+    {
+        printf("\ndeleted element is %d",a[pos]);
+        for(i=pos;i<n-1;i++)
+        {
+            a[i]=a[i+1];
+        }
+            n--;
+    }
 }
 void search()
 {
@@ -75,6 +86,10 @@ void search()
 }
 void display()
 {
+    if(n<=0)
+    {
+        printf("\narray is empty");
+    }
     for(i=0;i<n;i++)
     {
         printf("%d\t",a[i]);
@@ -83,30 +98,32 @@ void display()
 int main()
 {
     int ch;
-    printf("\n1.create\n2.insert\n3.delete\n4.search\n5.display\n");
+    printf("\n1.create\n2.insert\n3.delete\n4.search\n5.display\n6.exit\n");
     do{
         printf("\nenter the choice: ");
         scanf("%d",&ch);
         switch(ch)
         {
             case 1:
-            create();
-            break;
+                create();
+                break;
             case 2:
-            insert();
-            break;
+                insert();
+                break;
             case 3:
-            delete();
-            break;
+                delete();
+                break;
             case 4:
-            search();
-            break;
+                search();
+                break;
             case 5:
-            display();
-            break;
+                display();
+                break;
+            case 6:
+                //exit(0);
             default:
-            printf("\ninvalid");
-            break;
+                printf("\ninvalid");
+                break;
         }
-    }while(ch<6);
+    }while(ch<7);
 }
