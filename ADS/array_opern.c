@@ -17,9 +17,11 @@ void insert()
     if(pos<0||pos>=max)
     {
         printf("\ninvalid index");
-        goto c;
+        //goto c;
     }
-    for(i=n;i>pos;i--)
+    else
+    {
+        for(i=n;i>pos;i--)
     {
         if(n==max)
         {
@@ -31,11 +33,12 @@ void insert()
             a[i]=a[i-1];
         }
     }
-    c:
+    //c:
     if(n<max && pos<max && pos>=0)
     {
         a[pos]=val;
         n++;
+    }
     }
 }
 void delete()

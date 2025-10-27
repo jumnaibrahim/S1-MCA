@@ -1,3 +1,4 @@
+
 """
 #area and perimeter of circle
 r=int(input("enter the radius (in cm): "))
@@ -5,6 +6,7 @@ area=3.14*r*r
 perimeter=2*3.14*r
 print("Area is ",area,"cm")
 print("Perimeter is ",perimeter,"cm")"""
+
 
 
 """
@@ -16,11 +18,12 @@ temp=x
 x=y
 y=temp
 print("x = ",x)
-print("y = ",y)
+print("y = ",y)"""
+
+
+
 """
-
-
-"""#largest of 3
+#largest of 3
 x,y,z=map(int,input("enter three numbers: ").split())
 if x>y and x>z:
     print("largest number is: ",x)
@@ -28,6 +31,7 @@ if y>z:
     print("largest number is: ",y)
 else:
     print("largest number is: ",z)"""
+
 
 
 """
@@ -46,21 +50,24 @@ else:
 print("addition = ",add,"\nsubtraction = ",sub,"\nmultiplication = ",mul,"\ndivision = ",div)
 """
 
+
 """
 #first n multiples
 n=int(input("enter the number n: "))
 i=int(input("enter the number i: "))
 for x in range (1,n+1):
-    print(x,"*",i,"=",i*x)
-"""
+    print(x,"*",i,"=",i*x)"""
+
+
 
 """
 #sum of first 100 even numbers
 s=0
 for x in range (2,201,2):
     s=s+x
-print("sum of 100 even numbers is : ",s)
-"""
+print("sum of 100 even numbers is : ",s)"""
+
+
 
 """
 #factorial
@@ -71,6 +78,7 @@ for x in range (n,1,-1):
 print("factorial of",n,": ",f)
 """
 
+
 """
 #number of digits
 count=0
@@ -78,8 +86,8 @@ n=int(input("enter the number: "))
 while n!=0:
     n=n//10
     count=count+1
-print("number of digits: ",count)
-"""
+print("number of digits: ",count)"""
+
 
 """
 #leap year
